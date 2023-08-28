@@ -1,0 +1,12 @@
+local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+while task.wait() do
+task.spawn(function()
+for i=1,200 do
+task.spawn(function()
+game:GetService("ReplicatedStorage"):WaitForChild("GameClient"):WaitForChild("Events"):WaitForChild("RemoteEvent"):WaitForChild("RestTimerDaliyChest"):FireServer(unpack(args))
+end)
+end
+end)
+end
